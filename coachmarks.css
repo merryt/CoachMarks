@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: 400;
+  src:  url(RockSalt.woff) format('woff');
+}
+
+.coachmarks
+{
+
+    font-size: 16px;
+    font-family: 'Rock Salt', sans-serif;
+    line-height: 100%;
+    color: #ffffff;
+    background-color: rgba(0,0,0,.65);
+}
+
+.coachmarks
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1000;
+}
+
+.coachmarks, .coachmarks *
+{
+    box-sizing: border-box;
+}
+
+.coachmarks .info
+{
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1000;
+    white-space:pre;
+    font-family: courier;
+}
+
+
+.coachmarks svg
+{
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.coachmarks svg path
+{
+    stroke: #ffffff;
+    stroke-width: 3px;
+    stroke-linecap: round;
+}
+
+.coachmarks.noHead svg path.head
+{
+    display: none;
+}
+
+.coachmarks.chalk svg path
+{
+    filter: url(#chalk1);
+}
+
+
+.coachmark
+{
+    position: absolute;
+}
+
+.coachmark.selected
+{
+    z-index: 1000;
+}
+
+.coachmark.selected .fromObj
+{
+    border: 1px solid red;
+}
+
+.fromObj
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid transparent;
+    xbackground-color: rgba(0,100,0,.3);
+    xborder-radius: 50%;
+}
+
+
+.coachmark.selected .lineObj
+{
+    background-color: red;
+}
+
+.coachmark.selected .lineObj.selected
+{
+    background-color: blue;
+}
+
+.lineObj
+{
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100px;
+    height: 1px;
+    background: none;
+    -webkit-transform-origin: 0px 0px;
+}
+
+.coachmark.selected .lineObj .handleObj
+{
+    pointer-events: auto;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    z-index: 2;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.lineObj > *
+{
+    left: 100%;
+}
+
+.toObj
+{
+    pointer-events: none;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    text-align: center;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.toObj::before
+{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.toObj > *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.coachmark.selected .text
+{
+    border: 1px solid red;
+}
+.toObj .text
+{
+    pointer-events: auto;
+    border: 1px solid transparent;
+    min-width: 80px;
+    max-width: 150px;
+    padding: 6px;
+}
+
+
+.coachmarks.marquee svg path.line
+{
+  stroke-dasharray: 10;
+  -webkit-animation: dash .5s linear infinite;     
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 20;
+  }
+}
+

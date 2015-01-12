@@ -1,0 +1,114 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body,ul,li 
+{
+	 padding: 0;
+	 margin: 0;
+	 border: 0;
+}
+
+body 
+{
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    overflow: auto;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.app
+{
+    position: relative;
+    min-width: 560px;
+    min-height: 350px;
+}
+
+.coachmarks
+{
+    position: absolute;
+    z-index: 1000;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,.65);
+}
+
+.coachmarks .info
+{
+    color: #ffffff;
+    position: absolute;
+    z-index: 100;
+    bottom: 0px;
+    left: 0px;
+}
+
+.coachmark
+{
+    position: absolute;
+}
+
+.fromObj
+{
+    position: absolute;
+    xbackground-color: rgba(0,100,0,.3);
+    xborder-radius: 50%;
+}
+
+.toObj
+{
+    position: absolute;
+    right: 0px;
+    xbackground-color: rgba(0,0,0,.3);
+    xborder-radius: 50%;
+    text-align: center;
+    -webkit-transition: -webkit-transform .5s;
+}
+
+.toObj::before
+{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.toObj > *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.toObj .text
+{
+    color: #ffffff;
+    min-width: 80px;
+}
+
+
+.lineObj
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #ffffff;
+    height: 1px;
+    width: 0px;
+    -webkit-transform-origin: 0px 0px;
+    -webkit-transition: -webkit-transform .5s, width .5s;
+}
+
+
+

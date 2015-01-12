@@ -1,0 +1,212 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body,ul,li 
+{
+	 padding: 0;
+	 margin: 0;
+	 border: 0;
+}
+
+body 
+{
+    color: #333333;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    overflow: auto;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.app
+{
+    font-family: Courier;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #dddddd;
+}
+
+.header
+{
+    position: absolute;
+    height: 90px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.header > *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header::before
+{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+.logo
+{
+    font-size: 45px;
+    margin-left: 20px;
+}
+
+.navItems
+{
+    height: 100%;
+    float: right;
+    margin-right: 20px;
+}
+
+.navItems::before
+{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navItems > *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.navItem
+{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #cccccc;
+    color: #333333;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.navItem::before
+{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navItem > *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+.body
+{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #ccddee;
+}
+
+.leftPanel
+{
+    position: absolute;
+    left: 5px;
+    width: 195px;
+    top: 5px;
+    bottom: 5px;
+    padding: 10px;
+    background-color: #ddeecc;
+}
+
+
+.leftItem
+{
+    display: inline-block;
+    background-color: #febcad;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.rightPane
+{
+    position: absolute;
+    left: 205px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: #aaccbb;
+    font-size: 0px;
+    padding: 10px;
+}
+
+.tile
+{
+    position: relative;
+    font-size: 15px;
+    display: inline-block;
+    width: 25%;
+    height: 0px;
+    padding-bottom: 25%;
+}
+
+.tile .face
+{
+    padding: 10px;
+    color: #cccccc;
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,.4);
+    background-color: #660000;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+.tile .face .text
+{
+    display: inline-block;
+}
+
+.tile .face .button
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #000066;
+    border-radius: 50%;
+    color: #eeeeee;
+    text-align: center;
+    padding-top: 1px;
+}
